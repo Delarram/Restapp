@@ -38,7 +38,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Putunu",
+          "Rest",
           style: TextStyle(fontSize: 20),
         ),
       ),
