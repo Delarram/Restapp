@@ -14,13 +14,13 @@ class HeaderClipper extends CustomClipper<Path> {
     //Create Path
     Path path = Path();
     //Move to point P0, which is also the starting point of the curve
-    path.lineTo(0, size.height * 0.8);
+    path.lineTo(0, size.height * 0.5);
     //Calculate the coordinates of control point P1
-    double xCenter = size.width * 0.5 +
+    double xCenter = size.width * 0.4+
         (size.width * 0.6 + 1) * sin(moveFlag * pi);
-    double yCenter = size.height * 0.8 + 69 * cos(moveFlag*pi);
+    double yCenter = size.height * 0.8 + 20 * cos(moveFlag*pi);
     //Construction of second order Bessel curve
-    path.quadraticBezierTo(xCenter, yCenter, size.width, size.height * 0.8);
+    path.quadraticBezierTo(xCenter, yCenter, size.width, size.height * 0.5);
 
     path.lineTo(size.width, 0);
     return path;

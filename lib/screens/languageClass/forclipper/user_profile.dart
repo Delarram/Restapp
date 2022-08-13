@@ -1,17 +1,24 @@
-import 'dart:ui';
+
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-Positioned buildTopText(Size size) {
+Positioned buildProfile(Size size) {
   return Positioned(
-    top: size.height * 0.1,
-    left: 0,
-    right: 0,
+    top: size.height * 0.23,
+    left:130,
+    right: 130,
     child: Card(
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(7)),
       child: Container(
-        height: 130,
-        width: 130,
+        height: 110,
+        width: 100,
+        decoration: BoxDecoration(
+          color: Colors.grey[150],
+          image: DecorationImage(
+            image: AssetImage("assets/images/profile.png"),fit: BoxFit.contain
+          )
+        ),
       ),
     ),
   );
