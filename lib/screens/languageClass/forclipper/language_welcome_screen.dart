@@ -62,9 +62,6 @@ class _LanguageWelcomeScreenState extends State with SingleTickerProviderStateMi
     );
   }
 
-
-
-
   buildFirstAnimation(Size size) {
     return AnimatedBuilder(animation: _animationController, builder: (context,child){
       return ClipPath(

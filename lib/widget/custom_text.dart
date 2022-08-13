@@ -2,7 +2,7 @@ import 'package:flutter/widgets.dart';
 
 class CustomText extends StatelessWidget {
   final String text;
-  final double? size;
+  final double? fontSize;
   final FontWeight? fontWeight;
   final Color? color;
   final int? maxLine;
@@ -13,7 +13,7 @@ class CustomText extends StatelessWidget {
   const CustomText(
       {Key? key,
         required this.text,
-        this.size,
+        this.fontSize,
         this.fontWeight,
         this.color, this.maxLine, this.textAlign, this.textDecoration, this.textOverflow})
       : super(key: key);
@@ -23,7 +23,7 @@ class CustomText extends StatelessWidget {
     return  Text(
       text,
       style: TextStyle(
-          fontSize: size,
+          fontSize: fontSize,
           fontWeight: fontWeight,
           color: color,
           decoration: textDecoration

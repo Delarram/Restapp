@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rest_api/screens/languageClass/forclipper/position_top.dart';
-import 'package:rest_api/screens/languageClass/forclipper/user_profile.dart';
+import 'package:rest_api/screens/loginscreen/login_textfield.dart';
+
 
 import '../languageClass/forclipper/header.dart';
 
@@ -48,16 +48,18 @@ class _LoginScreenState extends State with SingleTickerProviderStateMixin{
         width: size.width,
         height: size.height,
         //Cascade
-        child: Stack(
-          children: <Widget>[
-            //Part I water ripple background
-            buildFirstAnimation(size),
-            //The text at the top of the second part
-            buildTopText(size),
-            //The button at the bottom of the third part
-            buildProfile(size)
-          ],
-        ),
+        child:SingleChildScrollView(
+          child: Column(
+            children: [
+              Stack(
+                children: <Widget>[
+                  buildFirstAnimationForLogin(size),
+                ],
+              ),
+              LoginTextField(),
+            ],
+          ),
+        )
       ),
     );
   }
@@ -65,12 +67,12 @@ class _LoginScreenState extends State with SingleTickerProviderStateMixin{
 
 
 
-  buildFirstAnimation(Size size) {
+  buildFirstAnimationForLogin(Size size) {
     return AnimatedBuilder(animation: _animationController, builder: (context,child){
       return ClipPath(
         clipper: HeaderClipper(_animationController.value),
         child: Container(
-          height: size.height * 0.5,
+          height: size.height * 0.4,
           decoration: BoxDecoration(
               gradient: LinearGradient(
                   begin: Alignment.bottomLeft,
