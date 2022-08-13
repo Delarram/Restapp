@@ -1,6 +1,10 @@
+
+
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:rest_api/screens/languageClass/forclipper/position_top.dart';
-import 'package:rest_api/screens/languageClass/forclipper/user_profile.dart';
 import 'package:rest_api/widget/bg_clippath.dart';
 
 import 'header.dart';
@@ -13,8 +17,8 @@ class LanguageWelcomeScreen extends StatefulWidget {
 }
 
 class _LanguageWelcomeScreenState extends State with SingleTickerProviderStateMixin{
-  late AnimationController _animationController;
-
+   late AnimationController _animationController;
+   String? imagePath;
   @override
   void initState() {
     super.initState();
@@ -33,9 +37,9 @@ class _LanguageWelcomeScreenState extends State with SingleTickerProviderStateMi
   }
   @override
   void dispose() {
-    _animationController.dispose();
     super.dispose();
   }
+
 
   Widget build(BuildContext context) {
     Size size = MediaQuery
@@ -84,4 +88,63 @@ class _LanguageWelcomeScreenState extends State with SingleTickerProviderStateMi
     });
   }
 
+   Positioned buildProfile(Size size) {
+     return Positioned(
+       top: size.height * 0.23,
+       left:140,
+       right: 140,
+       child: Card(
+         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(7)),
+         child: Stack(
+           clipBehavior: Clip.none,
+           children: [
+             (imagePath != null)
+                 ? CircleAvatar(
+               backgroundColor: Colors.grey[150],
+               radius: 50,
+               foregroundImage: Image.file(File(imagePath!)).image
+             )
+                 : CircleAvatar(
+               backgroundColor: Colors.grey[100],
+               radius: 45,
+               child: Image.asset(
+                 "assets/images/profile.png",
+                 fit: BoxFit.contain,
+               ), //Text
+             ),
+             Positioned(
+               left: 75,
+               bottom: 1.5,
+               child: GestureDetector(
+                 onTap: () {
+                   setState(() {
+                     pickMediaUser();
+                   });
+                 },
+                 child: Icon(
+                   Icons.camera_alt_sharp,
+                   color: const Color(0xffF5C206),
+                   size: 20,
+                 ),
+               ),
+             ),
+           ],
+         ),
+       ),
+     );
+   }
+
+   void pickMediaUser() async {
+     XFile? file = await ImagePicker().pickImage(source: ImageSource.gallery);
+     if (file != null) {
+         imagePath = file.path;
+       setState(() {});
+     }else {
+       const Icon(Icons.error);
+     }
+   }
 }
+// Image.file(
+// File(imagePath),
+// fit: BoxFit.cover,
+// ).image,

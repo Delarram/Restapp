@@ -33,7 +33,6 @@ class _LoginScreenState extends State with SingleTickerProviderStateMixin{
   }
   @override
   void dispose() {
-    _animationController.dispose();
     super.dispose();
   }
 
