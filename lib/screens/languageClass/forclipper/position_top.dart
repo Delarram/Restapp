@@ -9,10 +9,10 @@ Positioned buildTopText(Size size) {
     left: 0,
     right: 0,
     child: Text(
-      "Welcome",
+      "Mystery",
       textAlign: TextAlign.center,
       style: TextStyle(
-          fontSize: 33, color: Colors.white, fontWeight: FontWeight.bold),
+          fontSize: 24, color: Colors.white, fontWeight: FontWeight.bold),
     ),
   );
 }
