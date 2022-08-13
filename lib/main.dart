@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rest_api/screens/home_screen.dart';
+import 'package:rest_api/screens/languageClass/forclipper/language_welcome_screen.dart';
 import 'package:rest_api/views/home_page.dart';
 
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      home: const HomeScreen(),
+      home: const LanguageWelcomeScreen(),
     );
   }
 }
