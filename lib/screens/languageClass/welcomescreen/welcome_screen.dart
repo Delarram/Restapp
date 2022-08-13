@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rest_api/screens/languageClass/widget/bg_clippath.dart';
+import 'package:rest_api/widget/bg_clippath.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
