@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rest_api/screens/languageClass/forclipper/position_top.dart';
 import 'package:rest_api/screens/languageClass/forclipper/user_profile.dart';
+import 'package:rest_api/widget/bg_clippath.dart';
 
 import 'header.dart';
 
@@ -55,7 +56,10 @@ class _LanguageWelcomeScreenState extends State with SingleTickerProviderStateMi
             //The text at the top of the second part
             buildTopText(size),
             //The button at the bottom of the third part
-            buildProfile(size)
+            buildProfile(size),
+            ClipPath(
+              clipper: BgClipPath(),
+            )
           ],
         ),
       ),
