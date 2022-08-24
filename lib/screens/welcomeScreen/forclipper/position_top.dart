@@ -1,6 +1,3 @@
-import 'dart:ui';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 Positioned buildTopText(Size size) {
@@ -9,7 +6,7 @@ Positioned buildTopText(Size size) {
     left: 0,
     right: 0,
     child: Text(
-      "Mystery",
+      "Language Center",
       textAlign: TextAlign.center,
       style: TextStyle(
           fontSize: 24, color: Colors.white, fontWeight: FontWeight.bold),

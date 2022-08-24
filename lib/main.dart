@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rest_api/screens/languageClass/forclipper/language_welcome_screen.dart';
-import 'package:rest_api/screens/loginscreen/login_screen.dart';
+import 'package:rest_api/screens/welcomeScreen/forclipper/language_welcome_screen.dart';
 
 
 void main() {
