@@ -52,17 +52,18 @@ class _LanguageWelcomeScreenState extends State with SingleTickerProviderStateMi
         //Cascade
         child: Stack(
           children: <Widget>[
-            //Part I water ripple background
             buildFirstAnimation(size),
-            //The text at the top of the second part
             buildTopText(size),
             Align(
               alignment: Alignment.topRight,
               child: Container(
-                decoration: BoxDecoration(),
+                margin: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+                decoration: BoxDecoration(
+                    color: Colors.amber,
+                  borderRadius: BorderRadius.circular(10)
+                ),
                 height: 100,
                 width: 100,
-                color: Colors.amber,
               ),
             ),
             //The button at the bottom of the third part

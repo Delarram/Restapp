@@ -36,19 +36,7 @@ class _LandingPageState extends State<LandingPage> {
                 itemBuilder: (context, index) {
                   return Column(
                     children: <Widget>[
-                      // StackResuableWithImage(
-                      //     marginhorizontal: 25.h,
-                      //     marginvertical: 0.0.w,
-                      //     height: 250,
-                      //     width: double.infinity,
-                      //     image:'assets/images/ellipse.png',
-                      //     secondheigh: 300.h,
-                      //     secondwidth: 300.h,
-                      //     positionleft: 0.0.h,
-                      //     positionright: 0.0.h,
-                      //     positionbottom: -40.h,
-                      //     positiontop: 40.0.h,
-                      //     secondimage: aImageLinkForSplashScreen+bloc.splashScreenList[index].image!),
+
                       Container(
                         margin: const EdgeInsets.only(top: 100),
                         child: CustomText(
