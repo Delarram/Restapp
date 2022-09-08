@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:rest_api/pagination/refresh_listview.dart';
 import 'package:rest_api/screens/landingScreen/landing_screen.dart';
 import 'package:rest_api/screens/welcomeScreen/forclipper/language_welcome_screen.dart';
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const LandingPage(),
+        home: RefreshListView()
       );},
     );
   }
