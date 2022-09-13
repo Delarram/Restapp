@@ -36,6 +36,7 @@ dependencies:
   flutter_screenutil: ^5.5.3+2
   pull_to_refresh: ^2.0.0
   zoom_widget: ^0.2.1
+  google_sign_in: ^5.4.1
 
 dev_dependencies:
   flutter_test:
