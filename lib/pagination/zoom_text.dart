@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:zoom_widget/zoom_widget.dart';
 class ZoomText extends StatelessWidget {
@@ -26,7 +24,7 @@ class ZoomText extends StatelessWidget {
                   centerOnScale: true,
                   initZoom:0.0,
                   doubleTapZoom: true,
-                  maxZoomWidth: MediaQuery.of(context).size.height ,
+                  maxZoomWidth: MediaQuery.of(context).size.height,
                   maxZoomHeight: 1000.0,
                   child: Center(child: Text("Hello Zoom!!",style: TextStyle(fontSize: 40,color: Colors.black),),)),
             )
