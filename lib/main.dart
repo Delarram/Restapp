@@ -2,10 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:rest_api/googleSignIn/google_signup.dart';
-import 'package:rest_api/pagination/refresh_listview.dart';
-import 'package:rest_api/pagination/zoom_text.dart';
-import 'package:rest_api/screens/landingScreen/landing_screen.dart';
-import 'package:rest_api/screens/welcomeScreen/forclipper/language_welcome_screen.dart';
 
 GoogleSignIn _googleSignIn = GoogleSignIn(
   // Optional clientId

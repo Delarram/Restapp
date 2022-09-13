@@ -92,7 +92,7 @@ class SignInDemoState extends State<SignInDemo> {
   Future<void> _handleSignIn() async {
     try {
       await _googleSignIn.signIn();
-    } catch (error) {
+    }    catch (error) {
       print(error);
     }
   }
@@ -138,6 +138,7 @@ class SignInDemoState extends State<SignInDemo> {
       );
     }
   }
+
 
   @override
   Widget build(BuildContext context) {
