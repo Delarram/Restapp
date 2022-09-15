@@ -38,10 +38,16 @@ dependencies:
   zoom_widget: ^0.2.1
   google_sign_in: ^5.4.1
 
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: ^0.10.0
 
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/bell.png"
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 

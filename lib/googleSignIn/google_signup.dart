@@ -97,7 +97,6 @@ class SignInDemoState extends State<SignInDemo> {
     }
   }
 
-
   Future<void> _handleSignOut() => _googleSignIn.disconnect();
 
   Widget _buildBody() {
@@ -110,7 +109,7 @@ class SignInDemoState extends State<SignInDemo> {
             leading: GoogleUserCircleAvatar(
               identity: user,
             ),
-            title: Text(user.displayName ?? ''),
+            title: Text(user.displayName ??''),
             subtitle: Text(user.email),
           ),
           const Text('Signed in successfully.'),

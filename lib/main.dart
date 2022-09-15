@@ -25,12 +25,13 @@ class MyApp extends StatelessWidget {
       splitScreenMode: true,
       builder: (BuildContext context, Widget? child) {
         return MaterialApp(
-            debugShowCheckedModeBanner: false,
+            debugShowCheckedModeBanner:false,
             title: 'Flutter Demo',
             theme: ThemeData(
               primarySwatch: Colors.blue,
             ),
-            home: SignInDemo());
+            home: SignInDemo()
+        );
       },
     );
   }

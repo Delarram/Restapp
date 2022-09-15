@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'package:rest_api/pagination/refresh_listview_itemview.dart';
 
 class RefreshListView extends StatefulWidget {
