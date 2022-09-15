@@ -37,6 +37,8 @@ dependencies:
   pull_to_refresh: ^2.0.0
   zoom_widget: ^0.2.1
   google_sign_in: ^5.4.1
+  firebase_core: ^1.22.0
+  firebase_auth: ^3.9.0
 
 
 dev_dependencies:
