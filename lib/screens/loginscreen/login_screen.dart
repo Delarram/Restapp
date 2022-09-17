@@ -57,7 +57,9 @@ class _LoginScreenState extends State with SingleTickerProviderStateMixin{
                   buildFirstAnimationForLogin(size),
                 ],
               ),
-              LoginTextField(),
+              Container(
+                margin: EdgeInsets.all(20),
+                  child: LoginTextField()),
             ],
           ),
         )
