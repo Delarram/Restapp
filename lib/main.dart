@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:rest_api/googleSignIn/google_signup.dart';
+import 'package:rest_api/screens/loginscreen/login_screen.dart';
 
 GoogleSignIn _googleSignIn = GoogleSignIn(
   // Optional clientId
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
             theme: ThemeData(
               primarySwatch: Colors.blue,
             ),
-            home: SignInDemo()
+            home: LoginScreen()
         );
       },
     );

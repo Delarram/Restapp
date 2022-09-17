@@ -20,7 +20,7 @@ class LoginTextField extends StatelessWidget {
           CustomText(
             text: "Mystery",
             fontSize: 26,
-            color: Color(0xff0D0B4A),
+            color:Colors.grey,
             fontWeight: FontWeight.bold,
           ),
           CustomTextField(
@@ -40,9 +40,9 @@ class LoginTextField extends StatelessWidget {
             height: 50,
             width: double.infinity,
             labelText: "Password",
-            obsureText: false,
+            obsureText: true,
             suffixIcon: Icon(
-              FontAwesomeIcons.eyeSlash,
+              FontAwesomeIcons.ellipsis,
               color: Color(0xff0D0B4A),
               size: 20,
             ),
@@ -52,7 +52,8 @@ class LoginTextField extends StatelessWidget {
             child: CustomText(
               text: "Forgot your password?",
               fontSize: 14,
-              color: Color(0xFF08061F),
+              color:Colors.grey,
+              //Color(0xFF08061F),
               fontWeight: FontWeight.bold,
             ),
           ),

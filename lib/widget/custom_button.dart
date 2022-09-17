@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:rest_api/resources/color_constant.dart';
 
 class CustomButton extends StatelessWidget {
   final double width;
@@ -23,11 +24,15 @@ class CustomButton extends StatelessWidget {
                 begin: Alignment.centerLeft,
                 end: Alignment.centerRight,
                 colors: [
-                  Color(0xff0D0B4A),
-                  Color(0xff0D0B4A),
-                  Color(0xFF1E4680),
-                  Color(0xff0D0B4A),
-                  Color(0xff0D0B4A),
+                  // Color(0xff0D0B4A),
+                  cPrimary,
+                  cPrimary,
+                  //Color(0xff0D0B4A),
+                 // Color(0xFF1E4680),
+                  cPrimarySecond,
+                  cPrimary, cPrimary,
+                  // Color(0xff0D0B4A),
+                  // Color(0xff0D0B4A),
                 ])),
         child: Center(
           child: Text(

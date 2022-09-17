@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rest_api/resources/color_constant.dart';
 import 'package:rest_api/screens/loginscreen/login_textfield.dart';
 
 import '../welcomeScreen/forclipper/header.dart';
@@ -77,7 +78,10 @@ class _LoginScreenState extends State with SingleTickerProviderStateMixin{
               gradient: LinearGradient(
                   begin: Alignment.bottomLeft,
                   end: Alignment.topRight,
-                  colors:[Color(0xFF0D0B4A), Color(0xFF08061F)]
+                  colors:[
+                    Color(0xffF2BE01),Color(0xffF2BE01)
+                    // Color(0xFF0D0B4A), Color(0xFF08061F)
+                  ]
               )
           ),
         ),
