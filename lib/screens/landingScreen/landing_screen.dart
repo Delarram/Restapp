@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:rest_api/screens/loginscreen/login_screen.dart';
 
 
 import '../../widget/custom_button.dart';
@@ -36,30 +37,44 @@ class _LandingPageState extends State<LandingPage> {
                 itemBuilder: (context, index) {
                   return Column(
                     children: <Widget>[
-
                       Container(
-                        margin: const EdgeInsets.only(top: 100),
-                        child: CustomText(
-                          text: "Helllo",
-                          fontSize: 28.sp,
-                          fontWeight: FontWeight.bold,
+                        margin: EdgeInsets.only(top: 40),
+                        child: Center(
+                          child: Image.asset(
+                              "assets/images/hello.png",
+                              fit: BoxFit.fitHeight
+                          ),
                         ),
                       ),
                       Container(
+                        margin: const EdgeInsets.only(top: 50,bottom: 10),
+                        child: Center(
+                          child: CustomText(
+                            text: "Welcome To The World Of Language App",
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold,
+                            maxLine: 2,
+                            color:  Color(0xffC0C1D8),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ),
+                      //
+                      Container(
                         margin: const EdgeInsets.all(10),
-                        child: CustomText(
-                          text: "Min Ga La Pa",
-                          fontSize: 13.sp,
-                          fontWeight: FontWeight.normal,
-                          color: const Color(0xff4F4F4F),
+                        child: Center(
+                          child: CustomText(
+                            text: "Learning has never been so easy! With Mystery Language yoy will learn to speak your dream language no time",
+                            fontSize: 16,
+                            maxLine: 3,
+                            textAlign: TextAlign.center,
+                            color: const  Color(0xffA674F7)
+                          ),
                         ),
                       ),
                     ],
                   );
                 }),
-          ),
-          SizedBox(
-            height: 12.h,
           ),
           SizedBox(
             height: 20,
@@ -81,7 +96,7 @@ class _LandingPageState extends State<LandingPage> {
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         color: index == currentPage
-                            ? Colors.amber
+                            ? Color(0xffA674F7)
                             : Colors.grey,
                       ),
                     );
@@ -94,13 +109,26 @@ class _LandingPageState extends State<LandingPage> {
           if (currentPage == 2)
             Center(
               child: Padding(
-                padding: const EdgeInsets.only(bottom: 30),
-                child: CustomButton(
-                  nextPage: () {
-                  },
-                  text: 'Get Start',
-                  height: 40,
-                  width: 150,
+                padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 15),
+                child: Column(
+                  children: [
+                    CustomButton(
+                      nextPage: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (_)=>LoginScreen()));
+                      },
+                      text: 'LogIn',
+                      height: 40,
+                      width: double.infinity,
+                    ),SizedBox(height: 15,),
+                    CustomButton(
+                      nextPage: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (_)=>LoginScreen()));
+                      },
+                      text: 'SignIn',
+                      height: 40,
+                      width: double.infinity,
+                    ),SizedBox(height: 15,),
+                  ],
                 ),
               ),
             )
@@ -111,22 +139,36 @@ class _LandingPageState extends State<LandingPage> {
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      CustomText(
-                        text: "Skip",
-                        fontWeight: FontWeight.bold,
-                      ),
-                      const SizedBox(
-                        height: 2,
-                      ),
-                      Container(
-                        height: 1.h,
-                        width: 15.w,
-                        color: Colors.black,
-                      ),
-                    ],
+                  GestureDetector(
+                    onTap: (){
+                      setState(() {
+                        if (currentPage == 0) {
+                          currentPage = 2;
+                        } else {
+                          currentPage += 1;
+                        }
+                        pageController.animateToPage(currentPage,
+                            curve: Curves.decelerate,
+                            duration: const Duration(milliseconds: 300));
+                      });
+                    },
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        CustomText(
+                          text: "Skip",
+                          fontWeight: FontWeight.bold,
+                        ),
+                        const SizedBox(
+                          height: 2,
+                        ),
+                        Container(
+                          height: 1.h,
+                          width: 15.w,
+                          color: Colors.black,
+                        ),
+                      ],
+                    ),
                   ),
                   const Spacer(),
                   GestureDetector(
@@ -162,7 +204,7 @@ class _LandingPageState extends State<LandingPage> {
                         ),
                       ),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),

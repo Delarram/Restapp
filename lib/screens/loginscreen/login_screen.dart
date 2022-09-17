@@ -19,23 +19,23 @@ class _LoginScreenState extends State with SingleTickerProviderStateMixin{
   @override
   void initState() {
     super.initState();
-    _animationController = AnimationController(
-      //Default initial value
-      value: 0.0,
-      //execution time
-      duration: Duration(seconds: 10),
-      //Value range
-      upperBound: 1,
-      lowerBound: -1,
-      vsync: this,
-    );
-    //Repeat execution
-    _animationController.repeat();
+    // _animationController = AnimationController(
+    //   //Default initial value
+    //   value: 0.0,
+    //   //execution time
+    //   duration: Duration(seconds: 10),
+    //   //Value range
+    //   upperBound: 1,
+    //   lowerBound: -1,
+    //   vsync: this,
+    // );
+    // //Repeat execution
+    // _animationController.repeat();
   }
-  @override
-  void dispose() {
-    super.dispose();
-  }
+  // @override
+  // void dispose() {
+  //   super.dispose();
+  // }
 
   Widget build(BuildContext context) {
     Size size = MediaQuery

@@ -25,18 +25,23 @@ class CustomButton extends StatelessWidget {
                 end: Alignment.centerRight,
                 colors: [
                   // Color(0xff0D0B4A),
-                  cPrimary,
-                  cPrimary,
+                  // cPrimary,
+                  // cPrimary,
                   //Color(0xff0D0B4A),
-                 // Color(0xFF1E4680),
-                  cPrimarySecond,
-                  cPrimary, cPrimary,
+                  Color(0xFF1E4680),
+                  Color(0xFF1E4680),
+                  Color(0xFF1E4680),
+                  Color(0xFF1E4660),
+
+
+                 //  cPrimarySecond,
+                 //  cPrimary, cPrimary,
                   // Color(0xff0D0B4A),
                   // Color(0xff0D0B4A),
                 ])),
         child: Center(
           child: Text(
-            'Login',
+            text,
             style: TextStyle(
                 color: Colors.white,
                 fontSize: 20,
