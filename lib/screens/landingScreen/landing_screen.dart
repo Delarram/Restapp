@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rest_api/screens/loginscreen/login_screen.dart';
+import 'package:rest_api/screens/loginscreen/login_textfield.dart';
 
 
 import '../../widget/custom_button.dart';
@@ -27,7 +28,7 @@ class _LandingPageState extends State<LandingPage> {
   Widget build(BuildContext context) {
     return  Scaffold(
       body: Column(
-        mainAxisSize: MainAxisSize.max,
+        mainAxisSize: MainAxisSize.min,
         children: [
           Expanded(
             child: PageView.builder(
@@ -54,7 +55,7 @@ class _LandingPageState extends State<LandingPage> {
                             fontSize: 30,
                             fontWeight: FontWeight.bold,
                             maxLine: 2,
-                            color:  Color(0xffC0C1D8),
+                            color: Color(0xff0300000),
                             textAlign: TextAlign.center,
                           ),
                         ),
@@ -68,16 +69,44 @@ class _LandingPageState extends State<LandingPage> {
                             fontSize: 16,
                             maxLine: 3,
                             textAlign: TextAlign.center,
-                            color: const  Color(0xffA674F7)
+                            color: Colors.grey,
+                              //31347A
                           ),
                         ),
                       ),
+                      // SizedBox(
+                      //   height: 5,
+                      //   width: double.infinity,
+                      //   child: Center(
+                      //     child: ListView.separated(
+                      //         separatorBuilder: (context, index) {
+                      //           return const SizedBox(
+                      //             width: 10,
+                      //           );
+                      //         },
+                      //         scrollDirection: Axis.horizontal,
+                      //         itemCount: 3,
+                      //         physics: const NeverScrollableScrollPhysics(),
+                      //         shrinkWrap: true,
+                      //         itemBuilder: (context, index) {
+                      //           return Container(
+                      //             width: 15,
+                      //             decoration: BoxDecoration(
+                      //               borderRadius: BorderRadius.circular(5),
+                      //               color: index == currentPage
+                      //                   ? Color(0xff31347A)
+                      //                   : Colors.grey,
+                      //             ),
+                      //           );
+                      //         }),
+                      //   ),
+                      // ),
                     ],
                   );
                 }),
           ),
           SizedBox(
-            height: 20,
+            height: 5,
             width: double.infinity,
             child: Center(
               child: ListView.separated(
@@ -92,11 +121,11 @@ class _LandingPageState extends State<LandingPage> {
                   shrinkWrap: true,
                   itemBuilder: (context, index) {
                     return Container(
-                      width: 10,
+                      width: 15,
                       decoration: BoxDecoration(
-                        shape: BoxShape.circle,
+                        borderRadius: BorderRadius.circular(5),
                         color: index == currentPage
-                            ? Color(0xffA674F7)
+                            ? Color(0xff31347A)
                             : Colors.grey,
                       ),
                     );
@@ -114,12 +143,17 @@ class _LandingPageState extends State<LandingPage> {
                   children: [
                     CustomButton(
                       nextPage: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (_)=>LoginScreen()));
+                        Navigator.of(context).pushAndRemoveUntil(
+                            MaterialPageRoute(
+                                builder: (context) => const LoginTextField()
+                            ),
+                                (route) => false);
                       },
                       text: 'LogIn',
                       height: 40,
                       width: double.infinity,
-                    ),SizedBox(height: 15,),
+                    ),
+                    SizedBox(height: 15,),
                     CustomButton(
                       nextPage: () {
                         Navigator.push(context, MaterialPageRoute(builder: (_)=>LoginScreen()));
@@ -186,21 +220,22 @@ class _LandingPageState extends State<LandingPage> {
                     },
                     child: Container(
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(100),
+                          borderRadius: BorderRadius.circular(5),
                           color: Colors.transparent,
                           border: Border.all(
-                              width: 1, color: const Color(0xffF2BE01))),
+                              width: 1, color: const Color(0xff31347A))),
                       padding: const EdgeInsets.all(3),
                       child: Container(
-                        height: 50,
-                        width: 50,
+                        height: 25,
+                        width: 60,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(100),
-                          color: const Color(0xffF2BE01),
+                          borderRadius: BorderRadius.circular(5),
+                          color: const Color(0xff31347A),
                         ),
                         child: const Icon(
                           Icons.arrow_forward,
                           color: Colors.white,
+                          size: 18,
                         ),
                       ),
                     ),

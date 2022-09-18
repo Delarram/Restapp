@@ -14,24 +14,24 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State with SingleTickerProviderStateMixin{
-  late AnimationController _animationController;
+  // late AnimationController _animationController;
 
-  @override
-  void initState() {
-    super.initState();
-    // _animationController = AnimationController(
-    //   //Default initial value
-    //   value: 0.0,
-    //   //execution time
-    //   duration: Duration(seconds: 10),
-    //   //Value range
-    //   upperBound: 1,
-    //   lowerBound: -1,
-    //   vsync: this,
-    // );
-    // //Repeat execution
-    // _animationController.repeat();
-  }
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   // _animationController = AnimationController(
+  //   //   //Default initial value
+  //   //   value: 0.0,
+  //   //   //execution time
+  //   //   duration: Duration(seconds: 10),
+  //   //   //Value range
+  //   //   upperBound: 1,
+  //   //   lowerBound: -1,
+  //   //   vsync: this,
+  //   // );
+  //   // //Repeat execution
+  //   // _animationController.repeat();
+  // }
   // @override
   // void dispose() {
   //   super.dispose();
@@ -52,11 +52,6 @@ class _LoginScreenState extends State with SingleTickerProviderStateMixin{
         child:SingleChildScrollView(
           child: Column(
             children: [
-              Stack(
-                children: <Widget>[
-                  buildFirstAnimationForLogin(size),
-                ],
-              ),
               Container(
                 margin: EdgeInsets.all(20),
                   child: LoginTextField()),
@@ -70,25 +65,25 @@ class _LoginScreenState extends State with SingleTickerProviderStateMixin{
 
 
 
-  buildFirstAnimationForLogin(Size size) {
-    return AnimatedBuilder(animation: _animationController, builder: (context,child){
-      return ClipPath(
-        clipper: HeaderClipper(_animationController.value),
-        child: Container(
-          height: size.height * 0.4,
-          decoration: BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.bottomLeft,
-                  end: Alignment.topRight,
-                  colors:[
-                    Color(0xffF2BE01),Color(0xffF2BE01)
-                    // Color(0xFF0D0B4A), Color(0xFF08061F)
-                  ]
-              )
-          ),
-        ),
-      );
-    });
-  }
+  // buildFirstAnimationForLogin(Size size) {
+  //   return AnimatedBuilder(animation: _animationController, builder: (context,child){
+  //     return ClipPath(
+  //       clipper: HeaderClipper(_animationController.value),
+  //       child: Container(
+  //         height: size.height * 0.4,
+  //         decoration: BoxDecoration(
+  //             gradient: LinearGradient(
+  //                 begin: Alignment.bottomLeft,
+  //                 end: Alignment.topRight,
+  //                 colors:[
+  //                   Color(0xffF2BE01),Color(0xffF2BE01)
+  //                   // Color(0xFF0D0B4A), Color(0xFF08061F)
+  //                 ]
+  //             )
+  //         ),
+  //       ),
+  //     );
+  //   });
+  // }
 
 }

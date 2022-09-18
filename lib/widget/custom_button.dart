@@ -7,13 +7,13 @@ class CustomButton extends StatelessWidget {
   final double height;
   final String text;
   final dynamic margin;
-  final Function nextPage;
+  final VoidCallback nextPage;
   const CustomButton({Key? key, required this.width, required this.text, required this.height, this.margin, required this.nextPage}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: ()=>nextPage,
+      onTap: nextPage,
       child: Container(
         height: height,
         width: width,
@@ -28,10 +28,12 @@ class CustomButton extends StatelessWidget {
                   // cPrimary,
                   // cPrimary,
                   //Color(0xff0D0B4A),
-                  Color(0xFF1E4680),
-                  Color(0xFF1E4680),
-                  Color(0xFF1E4680),
-                  Color(0xFF1E4660),
+                  // Color(0xFF1E4680),
+                  Color(0xff31347A),
+                  Color(0xff31347A), Color(0xff31347A), Color(0xff31347A),
+                  // Color(0xFF1E4680),
+                  // Color(0xFF1E4680),
+                  // Color(0xFF1E4660),
 
 
                  //  cPrimarySecond,
