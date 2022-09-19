@@ -1,5 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
+
+
+final GoogleSignIn _googleSignIn = GoogleSignIn(
+  scopes: [
+    'email'
+  ]
+);
 
 class GoogleSignUPScreen extends StatefulWidget {
   const GoogleSignUPScreen({Key? key}) : super(key: key);
@@ -11,8 +19,21 @@ class GoogleSignUPScreen extends StatefulWidget {
 
 class _GoogleSignUPScreenState extends State<GoogleSignUPScreen> {
 
+  GoogleSignInAccount? _currentUser;
+  @override
+  void initState() {
+    _googleSignIn.onCurrentUserChanged.listen((account){
+      setState((){
+      _currentUser = account;
+      });
+    });
+    _googleSignIn.signInSilently();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
+    GoogleSignInAccount? user = _currentUser;
     bool isSignIn = true;
     return Scaffold(
       appBar: AppBar(
@@ -21,16 +42,16 @@ class _GoogleSignUPScreenState extends State<GoogleSignUPScreen> {
       body: Container(
         alignment: Alignment.center,
         child:
-        (isSignIn != true)?
+        (user != null)?
         Padding(
           padding: const EdgeInsets.all(18.0),
           child: Center(
             child: Column(
               children: [
                 ListTile(
-                  leading: Icon(Icons.person),
-                  title: Text("Display Name"),
-                  subtitle: Text("email"),
+                  leading: GoogleUserCircleAvatar(identity: user,),
+                  title: Text("${user.displayName}"),
+                  subtitle: Text("${user.email}"),
                 ),
                 SizedBox(
                   height: 20,
@@ -42,6 +63,7 @@ class _GoogleSignUPScreenState extends State<GoogleSignUPScreen> {
                 SizedBox(height: 15,),
                 MaterialButton(
                     onPressed: (){
+                      signOut();
                 },
                   color: Colors.blue,
                 child: Text("Sign out"),)
@@ -64,14 +86,28 @@ class _GoogleSignUPScreenState extends State<GoogleSignUPScreen> {
                 SizedBox(height: 15,),
                 MaterialButton(
                   onPressed: (){
+                    signIn();
                   },
                   color: Colors.blue,
-                  child: Text("Sign out"),)
+                  child: Text("Sign in"),
+                )
               ],
             ),
           ),
         )
       ),
     );
+  }
+
+}
+void signOut(){
+  _googleSignIn.disconnect();
+}
+
+  Future<void> signIn() async{
+  try{
+    await _googleSignIn.signIn();
+  }catch(e){
+    print("getting error while signIn$e");
   }
 }
