@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "677042979974",
-    "project_id": "helo-a5907",
-    "storage_bucket": "helo-a5907.appspot.com"
+    "project_number": "771539822195",
+    "project_id": "restapp-5d400",
+    "storage_bucket": "restapp-5d400.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:677042979974:android:259d41d9f81e44bbb73d07",
+        "mobilesdk_app_id": "1:771539822195:android:11ce75d87619c92e702c06",
         "android_client_info": {
           "package_name": "com.example.rest_api"
         }
       },
       "oauth_client": [
         {
-          "client_id": "677042979974-i781cglcpe0p9gu96ugg9f6e6s5h245v.apps.googleusercontent.com",
+          "client_id": "771539822195-tt7j2eo7cn8e848fkbn1b5c034agkrjh.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyA1rFiYrCEdsee2yrGPfyXzoWsbOrtUFsg"
+          "current_key": "AIzaSyDhqb8LaEVgwMYQEcKOasKc89AtSaxh9f8"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "677042979974-i781cglcpe0p9gu96ugg9f6e6s5h245v.apps.googleusercontent.com",
+              "client_id": "771539822195-tt7j2eo7cn8e848fkbn1b5c034agkrjh.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
