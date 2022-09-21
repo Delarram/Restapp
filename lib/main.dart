@@ -1,6 +1,8 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:rest_api/facebook_signin/facebook_sign_in.dart';
 import 'package:rest_api/googleSignIn/google_sign_up.dart';
 import 'package:rest_api/googleSignIn/google_sign_up_third/signin_with_google.dart';
 import 'package:rest_api/screens/landingScreen/landing_screen.dart';
@@ -15,7 +17,17 @@ GoogleSignIn _googleSignIn = GoogleSignIn(
 );
 
 
-void main() {
+Future<void> main() async {
+  if (kIsWeb) {
+    // initialiaze the facebook javascript SDK
+
+    await FacebookAuth.instance.webInitialize(
+      appId: "1329834907365798",
+      cookie: true,
+      xfbml: true,
+      version: "v13.0",
+    );
+  }
   runApp(MyApp());
 }
 
@@ -32,7 +44,7 @@ class MyApp extends StatelessWidget {
             theme: ThemeData(
               primarySwatch: Colors.blue,
             ),
-            home: GoogleSignUPScreen()
+            home: FaceBookSignIn()
         );
       },
     );
