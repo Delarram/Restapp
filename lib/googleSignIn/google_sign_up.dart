@@ -5,7 +5,8 @@ import 'package:google_sign_in/google_sign_in.dart';
 
 final GoogleSignIn _googleSignIn = GoogleSignIn(
   scopes: [
-    'email'
+    'name'
+    'password'
   ]
 );
 
@@ -34,7 +35,7 @@ class _GoogleSignUPScreenState extends State<GoogleSignUPScreen> {
   @override
   Widget build(BuildContext context) {
     GoogleSignInAccount? user = _currentUser;
-    bool isSignIn = true;
+
     return Scaffold(
       appBar: AppBar(
         title: Text("Google Sign In "),
@@ -98,8 +99,9 @@ class _GoogleSignUPScreenState extends State<GoogleSignUPScreen> {
       ),
     );
   }
-
 }
+
+
 void signOut(){
   _googleSignIn.disconnect();
 }

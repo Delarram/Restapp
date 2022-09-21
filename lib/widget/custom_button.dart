@@ -7,7 +7,7 @@ class CustomButton extends StatelessWidget {
   final double height;
   final String text;
   final dynamic margin;
-  final VoidCallback nextPage;
+  final VoidCallback nextPage;//changed function into voidCallback
   const CustomButton({Key? key, required this.width, required this.text, required this.height, this.margin, required this.nextPage}) : super(key: key);
 
   @override
