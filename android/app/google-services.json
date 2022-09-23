@@ -1,33 +1,41 @@
 {
   "project_info": {
-    "project_number": "771539822195",
-    "project_id": "restapp-5d400",
-    "storage_bucket": "restapp-5d400.appspot.com"
+    "project_number": "391843214859",
+    "project_id": "restapp-260c6",
+    "storage_bucket": "restapp-260c6.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:771539822195:android:11ce75d87619c92e702c06",
+        "mobilesdk_app_id": "1:391843214859:android:82a9c3f13ad0e715d6790e",
         "android_client_info": {
           "package_name": "com.example.rest_api"
         }
       },
       "oauth_client": [
         {
-          "client_id": "771539822195-tt7j2eo7cn8e848fkbn1b5c034agkrjh.apps.googleusercontent.com",
+          "client_id": "391843214859-7p700nk6mceu4ondiih5oj75kg0lgsv5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rest_api",
+            "certificate_hash": "39d084ba38595f5ff21870d20c4c1247f22539e9"
+          }
+        },
+        {
+          "client_id": "391843214859-o4q5c9bfd6pgbj0mn1i37kjn46i9pj0m.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDhqb8LaEVgwMYQEcKOasKc89AtSaxh9f8"
+          "current_key": "AIzaSyDFtO1QoQvfwBQxS3h78ruAVJYE-0G_8Qc"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "771539822195-tt7j2eo7cn8e848fkbn1b5c034agkrjh.apps.googleusercontent.com",
+              "client_id": "391843214859-o4q5c9bfd6pgbj0mn1i37kjn46i9pj0m.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

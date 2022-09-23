@@ -18,31 +18,41 @@ class _FaceBookSignInState extends State<FaceBookSignIn> {
         elevation: 3,
       ),
       body: SafeArea(
-        child:Column(
-          children: [
-                MaterialButton(color: Colors.blue,
-                  onPressed: () async{
-                    final result = await FacebookAuth.i.login(
-                        permissions: ["public_profile", "email"]
-                    );
-
-                    if (result.status == LoginStatus.success) {
-
-                      final userData = await FacebookAuth.i.getUserData(
-                        fields: "email,name",
+        child:Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+                  MaterialButton(color: Colors.blue,
+                    onPressed: () async{
+                      final result = await FacebookAuth.i.login(
+                          permissions: ["public_profile", "email"]
                       );
 
-                      setState(() {
-                        _userData = userData;
-                      });
+                      if (result.status == LoginStatus.success) {
 
-                    }
-                  },child: Text("Log in"),
-                ),
-            MaterialButton(
-              color: Colors.blue,
-              onPressed: (){},child: Text("Log out"),)
-          ],
+                        final userData = await FacebookAuth.i.getUserData(
+                          fields: "email,name",
+                        );
+
+                        setState(() {
+                          _userData = userData;
+                        });
+
+                      }
+                    },child: Text("Log in"),
+                  ),
+              MaterialButton(
+                color: Colors.blue,
+                onPressed: () async{
+                  await FacebookAuth.i.logOut();
+                  setState(() {
+                    _userData = null;
+                  });
+                },
+                child: Text("Log out"),)
+            ],
+          ),
         ),
       ),
     );
