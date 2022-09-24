@@ -47,6 +47,7 @@ dependencies:
   page_transition: ^2.0.9
   flutter_html: ^2.2.1
   flutter_facebook_auth: ^4.4.1
+  carousel_slider: ^4.1.1
 
 
 

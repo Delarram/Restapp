@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:zoom_widget/zoom_widget.dart';
 
 class PageViewListViewDialog extends StatefulWidget {
   const PageViewListViewDialog({Key? key, required this.imageList}) : super(key: key);
@@ -48,7 +49,20 @@ class _PageViewListViewDialogState extends State<PageViewListViewDialog> {
                               itemCount: widget.imageList.length,
                               itemBuilder:
                                   (BuildContext context, int itemIndex) {
-                                return Container();
+                                return Zoom(
+                                    zoomSensibility: 2.3,
+                                    colorScrollBars: Colors.transparent,
+                                    doubleTapZoom: false,
+                                    maxZoomHeight: 1200,
+                                    maxZoomWidth: 1200,
+                                    initZoom: 0,
+                                    // centerOnScale: true,
+                                    backgroundColor: Colors.black,
+                                    child: Image.network(
+                                        ""
+                                      // imageLink + widget.imageList[_position.round()]
+                                    )
+                                );
                               }),
                         ),
                       ),
