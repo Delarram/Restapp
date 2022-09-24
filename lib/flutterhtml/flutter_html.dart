@@ -29,6 +29,7 @@ class HomePage extends StatelessWidget {
        
     </ul>
     <img src='https://www.kindacode.com/wp-content/uploads/2020/11/my-dog.jpg' />
+    <img src='https://www.kindacode.com/wp-content/uploads/2020/11/my-dog.jpg' />
   </div>
   """;
 
@@ -47,7 +48,8 @@ class HomePage extends StatelessWidget {
             style: {
               'h1': Style(color: Colors.red),
               'p': Style(color: Colors.black87, fontSize: FontSize.medium),
-              'ul': Style(margin: const EdgeInsets.symmetric(vertical: 20))
+              'ul': Style(
+                  margin: const EdgeInsets.symmetric(vertical: 20),)
             },
           ),
         ),
