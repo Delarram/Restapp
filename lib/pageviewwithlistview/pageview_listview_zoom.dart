@@ -66,6 +66,63 @@ class _PageViewListViewDialogState extends State<PageViewListViewDialog> {
                               }),
                         ),
                       ),
+                      Align(
+                        alignment: Alignment.bottomCenter,
+                        child: Container(
+                          margin: EdgeInsets.symmetric(vertical: 10),
+                          height: 100,
+                          child:  ListView.separated(
+                              padding: EdgeInsets.all(8),
+                              scrollDirection: Axis.horizontal,
+                              shrinkWrap: true,
+                              itemBuilder: (context, index) {
+                                return GestureDetector(
+                                    onTap: (){
+                                      setState((){
+                                        // _position=index.toDouble();
+                                      });
+                                    },
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(7),
+                                          border: Border.all(width: 2,
+                                               color:
+                                              // (_position == index)?
+                                              Color(0xffF48FB1)
+                                                  // : Colors.transparent
+                                          )
+                                      ),
+                                      child: ClipRRect(
+                                          borderRadius: BorderRadius.circular(7),
+                                          child: Image.network(""
+                                              // imageLink + widget.imageList[index]
+                                          )
+                                      ),
+                                    ));
+                              },
+                              separatorBuilder: (context, index) {
+                                return SizedBox(width: 5);
+                              },
+                              itemCount: widget.imageList.length),
+                        ),
+                      ),
+                      Positioned.fill(
+                        child: GestureDetector(
+                          onTap: (){
+                            Navigator.pop(context);
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Align(
+                              alignment:Alignment.topLeft,
+                              child: Icon(
+                                Icons.close,
+                                color: Color(0xffFFFFFF),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
                     ],
                    ),
                  ),
