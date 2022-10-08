@@ -1,18 +1,9 @@
 import 'dart:convert';
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_sign_in/google_sign_in.dart';
 import 'package:rest_api/cupertino_picker/cupertino_picker.dart';
-import 'package:rest_api/facebook_signin/facebook_sign_in.dart';
-import 'package:rest_api/flutterhtml/flutter_html.dart';
-import 'package:rest_api/googleSignIn/google_sign_in_second.dart';
-import 'package:rest_api/googleSignIn/google_sign_up.dart';
-import 'package:rest_api/googleSignIn/google_sign_up_third/signin_with_google.dart';
-import 'package:rest_api/screens/landingScreen/landing_screen.dart';
-
 
 
 Future<void> main() async {
