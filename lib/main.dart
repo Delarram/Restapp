@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:rest_api/cupertino_picker/cupertino_picker.dart';
 import 'package:rest_api/facebook_signin/facebook_sign_in.dart';
 import 'package:rest_api/flutterhtml/flutter_html.dart';
 import 'package:rest_api/googleSignIn/google_sign_in_second.dart';
@@ -47,7 +48,7 @@ class MyApp extends StatelessWidget {
             theme: ThemeData(
               primarySwatch: Colors.blue,
             ),
-            home: FlutterHtml()
+            home:IosDialog()
         );
       },
     );

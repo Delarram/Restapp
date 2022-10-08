@@ -138,29 +138,35 @@ class _LandingPageState extends State<LandingPage> {
           if (currentPage == 2)
             Center(
               child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 15),
-                child: Column(
+                padding: const EdgeInsets.symmetric(vertical: 30,horizontal: 15),
+                child: Row(
                   children: [
-                    CustomButton(
-                      nextPage: () {
-                        Navigator.of(context).pushAndRemoveUntil(
-                            MaterialPageRoute(
-                                builder: (context) => const LoginTextField()
-                            ),
-                                (route) => false);
-                      },
-                      text: 'LogIn',
-                      height: 40,
-                      width: double.infinity,
+                    Expanded(
+                      child: CustomButton(
+                        nextPage: () {
+                          Navigator.of(context).pushAndRemoveUntil(
+                              MaterialPageRoute(
+                                  builder: (context) => const LoginTextField()
+                              ),
+                                  (route) => false);
+                        },
+                        text: 'LogIn',
+                        height: 50,
+                        color: Color(0xffFFFFFF),
+                        width: double.infinity,
+                      ),
                     ),
-                    SizedBox(height: 15,),
-                    CustomButton(
-                      nextPage: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (_)=>LoginScreen()));
-                      },
-                      text: 'SignIn',
-                      height: 40,
-                      width: double.infinity,
+                    SizedBox(width: 10),
+                    Expanded(
+                      child: CustomButton(
+                        nextPage: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (_)=>LoginTextField()));
+                        },
+                        text: 'SignIn',
+                        height: 50,
+                        color: Color(0xffFFFFFF),
+                        width: double.infinity,
+                      ),
                     ),SizedBox(height: 15,),
                   ],
                 ),

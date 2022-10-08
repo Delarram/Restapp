@@ -17,7 +17,9 @@ class LoginTextField extends StatelessWidget {
       body:SafeArea(
         child:SingleChildScrollView(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.max,
             children: [
               // RichText(text: TextSpan(
               //   style: TextStyle(fontSize: 30),
@@ -29,7 +31,7 @@ class LoginTextField extends StatelessWidget {
               CustomText(
                 text: "Mystery",
                 fontSize: 26,
-                color:Colors.grey,
+                color:Colors.black54,
                 fontWeight: FontWeight.bold,
               ),
               SizedBox(height: 15,),
@@ -72,14 +74,15 @@ class LoginTextField extends StatelessWidget {
               SizedBox(
                 width: 20,height: 15,
               ),
-              CustomButton(
-                width: double.infinity,
-                text: "Login",
-                height: 45,
-                nextPage: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (_)=>LanguageWelcomeScreen()));
-                },
-              )
+              // CustomButton(
+              //   width: double.infinity,
+              //   text: "Login",
+              //   color: Color(0xffFFFFFF),
+              //   height: 5,
+              //   nextPage: (){
+              //     Navigator.push(context, MaterialPageRoute(builder: (_)=>LanguageWelcomeScreen()));
+              //   },
+              // )
             ],
           ),
         ),

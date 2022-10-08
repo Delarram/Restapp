@@ -137,7 +137,7 @@ class _GoogleButtonState extends State<GoogleButton> {
    Widget build(BuildContext context) {
      return SizedBox(
        width: double.infinity,
-       child: RaisedButton(
+       child: MaterialButton(
          onPressed: () async {
            GoogleSignIn _googleSignIn = GoogleSignIn(
              scopes: [
