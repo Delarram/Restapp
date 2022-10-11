@@ -28,17 +28,13 @@ class _FaceBookSignInState extends State<FaceBookSignIn> {
                       final result = await FacebookAuth.i.login(
                           permissions: ["public_profile", "email"]
                       );
-
                       if (result.status == LoginStatus.success) {
-
                         final userData = await FacebookAuth.i.getUserData(
                           fields: "email,name",
                         );
-
                         setState(() {
                           _userData = userData;
                         });
-
                       }
                     },child: Text("Log in"),
                   ),

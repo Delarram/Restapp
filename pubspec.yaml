@@ -46,8 +46,10 @@ dependencies:
   fluttertoast: ^8.0.9
   page_transition: ^2.0.9
   flutter_html: ^2.2.1
+  flutter_svg: ^1.1.5
   flutter_facebook_auth: ^4.4.1
   carousel_slider: ^4.1.1
+
 
 
 
@@ -55,6 +57,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_launcher_icons: ^0.10.0
+
 
 flutter_icons:
   android: true
