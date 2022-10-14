@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class RecentViewListView extends StatelessWidget {
-  const RecentViewListView({Key? key}) : super(key: key);
+class CourseListview extends StatelessWidget {
+  const CourseListview({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
