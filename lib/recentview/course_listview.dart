@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rest_api/recentview/course_item_view.dart';
 
 class CourseListview extends StatelessWidget {
   const CourseListview({Key? key}) : super(key: key);
@@ -7,7 +8,7 @@ class CourseListview extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.separated(
         itemBuilder: (context, index) {
-          return Container();
+          return CourseItemView();
         },
         separatorBuilder: (context, index) {
           return SizedBox(

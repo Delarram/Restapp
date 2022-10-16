@@ -18,7 +18,8 @@ class CourseItemView extends StatelessWidget {
           CachedNetworkImage(
             imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkQ-i9GP2SKQVYWmKPbNdRP00Ad3iINdw_4zEtrbrl&s",
             placeholder: (context, url) =>
-            const Center(child: CircularProgressIndicator()),
+            const Center(child: CircularProgressIndicator()
+            ),
             errorWidget: (context, url, error) => const Icon(Icons.error),
             height: 90,
             width: 90,
@@ -29,16 +30,31 @@ class CourseItemView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
                CustomText(
-                 text: "how are you",
+                 text:"My Course",
                    color: Colors.black,
                  textOverflow: TextOverflow.ellipsis,
                  maxLine: 2,
                ),
                Spacer(),
-                TweenAnimationBuilder(
-                  tween: Tween<double>(begin: 0, end: 30),
+                TweenAnimationBuilder<double>(
+                  tween: Tween<double>(begin: 0.0, end: 30.0),
                   duration: Duration(microseconds: 2500),
-                  builder: (context,value,_)=> LinearProgressIndicator(),),
+                  builder: (context,value,_)=> LinearProgressIndicator(
+                    value: value,
+                    color: Colors.grey.shade100,
+                    backgroundColor: Colors.pink[400],
+                  ),),
+              SizedBox(height: 8,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                   CustomText(
+                     text: "Continue",
+                     fontSize: 11,
+                   )
+                ],
+              )
             ],
           ),
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rest_api/recentview/course_listview.dart';
 
 class CoursePage extends StatelessWidget {
   const CoursePage({Key? key}) : super(key: key);
@@ -15,7 +16,7 @@ class CoursePage extends StatelessWidget {
         width: double.infinity,
         child: Column(
           children: [
-
+               CourseListview()
           ],
         ),
       ),
