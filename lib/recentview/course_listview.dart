@@ -15,6 +15,6 @@ class CourseListview extends StatelessWidget {
             height: 10,
           );
         },
-        itemCount: 7);
+        itemCount: 10);
   }
 }
