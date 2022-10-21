@@ -24,7 +24,8 @@ class DropDownScreen extends StatelessWidget {
                 child: CityDropDown(
                   key: const Key("cityDropdown"),
                   selectedCity: bloc.selectedCity,
-                  onClickCity:bloc.onSelectedCity, cityList: bloc.cityList,
+                  onClickCity:bloc.onSelectedCity,
+                  cityList: bloc.cityList,
                 ),
               ),
             ],
