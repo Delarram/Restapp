@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'course_homeatk.dart';
+
 class CourseScreen extends StatelessWidget {
   const CourseScreen({Key? key}) : super(key: key);
 
@@ -18,7 +20,7 @@ class CourseScreen extends StatelessWidget {
             ),
             child: Column(
               children: [ 
-                
+                CourseHomeAtk()
               ],
             ),
           ),
