@@ -25,22 +25,7 @@ class CustomButton extends StatelessWidget {
                 begin: Alignment.centerLeft,
                 end: Alignment.centerRight,
                 colors: [
-                  // Color(0xff0D0B4A),
-                  // cPrimary,
-                  // cPrimary,
-                  //Color(0xff0D0B4A),
-                  // Color(0xFF1E4680),
-                  // Color(0xff31347A),
                   Color(0xff31347A), Color(0xff31347A), Color(0xff31347A),
-                  // Color(0xFF1E4680),
-                  // Color(0xFF1E4680),
-                  // Color(0xFF1E4660),
-
-
-                 //  cPrimarySecond,
-                 //  cPrimary, cPrimary,
-                  // Color(0xff0D0B4A),
-                  // Color(0xff0D0B4A),
                 ])),
         child: Center(
           child: Text(
