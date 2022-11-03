@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../widget/custom_text.dart';
+
 class CourseHomeAtk extends StatelessWidget {
   const CourseHomeAtk({Key? key}) : super(key: key);
 

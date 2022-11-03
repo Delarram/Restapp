@@ -74,33 +74,6 @@ class _LandingPageState extends State<LandingPage> {
                           ),
                         ),
                       ),
-                      // SizedBox(
-                      //   height: 5,
-                      //   width: double.infinity,
-                      //   child: Center(
-                      //     child: ListView.separated(
-                      //         separatorBuilder: (context, index) {
-                      //           return const SizedBox(
-                      //             width: 10,
-                      //           );
-                      //         },
-                      //         scrollDirection: Axis.horizontal,
-                      //         itemCount: 3,
-                      //         physics: const NeverScrollableScrollPhysics(),
-                      //         shrinkWrap: true,
-                      //         itemBuilder: (context, index) {
-                      //           return Container(
-                      //             width: 15,
-                      //             decoration: BoxDecoration(
-                      //               borderRadius: BorderRadius.circular(5),
-                      //               color: index == currentPage
-                      //                   ? Color(0xff31347A)
-                      //                   : Colors.grey,
-                      //             ),
-                      //           );
-                      //         }),
-                      //   ),
-                      // ),
                     ],
                   );
                 }),
