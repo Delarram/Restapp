@@ -20,7 +20,7 @@ class _LandingProgressState extends State<LandingProgress> {
   void initState() {
     value = 0;
     setState(() {
-
+    downloadData();
     });
     // TODO: implement initState
     super.initState();
@@ -62,5 +62,17 @@ class _LandingProgressState extends State<LandingProgress> {
       ),
     );
   }
-
+  void downloadData() {
+    Timer.periodic(Duration(seconds: 1), (Timer timer) {
+      setState(() {
+        if (value == 1) {
+          timer.cancel();
+          Navigator.pushAndRemoveUntil(context,
+            MaterialPageRoute(builder: (_) => const LandingPage() ),(route) => false,);
+        } else {
+          value = value! + 0.5;
+        }
+      });
+    });
+  }
 }

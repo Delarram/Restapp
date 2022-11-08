@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../widget/custom_text.dart';
+import '../../widget/custom_textfield.dart';
 
 class CourseHomeAtk extends StatelessWidget {
   const CourseHomeAtk({Key? key}) : super(key: key);
@@ -30,8 +31,8 @@ class CourseHomeAtk extends StatelessWidget {
                         child: Row(
                           children: [
                             Container(
-                              height: 50.h,
-                              width: 50.w,
+                              height: 50,
+                              width: 50,
                               decoration: const BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: Color(0xffF6F6F6),
@@ -46,8 +47,7 @@ class CourseHomeAtk extends StatelessWidget {
                               children: [
                                 CustomText(
                                   text: "Aung Thu",
-                                  fontSize: 16.sp,
-                                  fontColor: Color(0xffFFFFFF),
+                                  fontSize: 16,
                                   fontWeight: FontWeight.w400,
                                 ),
                                 const SizedBox(
@@ -55,8 +55,7 @@ class CourseHomeAtk extends StatelessWidget {
                                 ),
                                 CustomText(
                                   text: "Good Morning",
-                                  fontSize: 12.sp,
-                                  fontColor: Color(0xffFFFFFF),
+                                  fontSize: 12,
                                   fontWeight: FontWeight.w400,
                                 ),
                               ],
@@ -86,13 +85,9 @@ class CourseHomeAtk extends StatelessWidget {
                       ),
                       Container(
                         margin: const EdgeInsets.symmetric(horizontal: 20),
-                        child: const CustomTextField(
+                        child:  CustomTextField(
                           width: double.infinity,
-                          borderRadius: 10.0,
-                          fillColor: Color(0xffFFFFFF),
-                          hintText: "Search here...",
-                          padding: EdgeInsets.all(12),
-                          prefixicon: Icon(Icons.search_outlined,size: 30,),
+                          height:20, labelText: 'Enter please', obsureText:true ,
                         ),
                       )
                     ],
