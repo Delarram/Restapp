@@ -35,11 +35,33 @@ dependencies:
   file_picker: ^5.0.0
   flutter_screenutil: ^5.5.3+2
   pull_to_refresh: ^2.0.0
+  zoom_widget: ^0.2.1
+  google_sign_in: ^5.4.1
+  firebase_core: ^1.22.0
+  firebase_auth: ^3.9.0
+  google_fonts: ^3.0.1
+  dots_indicator: ^2.1.0
+  device_info_plus: ^4.1.2
+  flutter_secure_storage: ^6.0.0
+  fluttertoast: ^8.0.9
+  page_transition: ^2.0.9
+  flutter_html: ^2.2.1
+  flutter_facebook_auth: ^4.4.1
+  carousel_slider: ^4.1.1
+  flutter_lints: ^2.0.1
+  cached_network_image: ^3.2.2
+
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: ^0.10.0
 
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/bell.png"
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 

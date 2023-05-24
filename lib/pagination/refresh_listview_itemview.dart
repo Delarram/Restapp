@@ -10,6 +10,11 @@ class RefreshListViewItemView extends StatefulWidget {
 }
 
 class _RefreshListViewItemViewState extends State<RefreshListViewItemView> {
+
+  int currentPage = 1;
+  bool isRefresh = false;
+
+
   final List<String> items = ["car","train","flight","shop","car","train","flight","shop","car","train","flight","shop","car","train","flight","shop",];
 
   RefreshController _refreshController =
@@ -53,15 +58,16 @@ class _RefreshListViewItemViewState extends State<RefreshListViewItemView> {
                 child: Text(
                   items[index],
                   style: TextStyle(fontSize: 13),
+
                 ),
               ),
+              title: Text('Item ${items[index]}'),
+              subtitle: Text('Item description'),
+              trailing: Icon(Icons.more_vert),
             ),
-            title: Text('Item ${items[index]}'),
-            subtitle: Text('Item description'),
-            trailing: Icon(Icons.more_vert),
-          ),
-        );
-      },
+          );
+        },
+      ),
     );
   }
 }
