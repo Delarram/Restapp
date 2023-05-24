@@ -35,10 +35,7 @@ class _LanguageWelcomeScreenState extends State with SingleTickerProviderStateMi
     //Repeat execution
     _animationController.repeat();
   }
-  @override
-  void dispose() {
-    super.dispose();
-  }
+
 
 
   Widget build(BuildContext context) {
@@ -55,10 +52,20 @@ class _LanguageWelcomeScreenState extends State with SingleTickerProviderStateMi
         //Cascade
         child: Stack(
           children: <Widget>[
-            //Part I water ripple background
             buildFirstAnimation(size),
-            //The text at the top of the second part
             buildTopText(size),
+            Align(
+              alignment: Alignment.topRight,
+              child: Container(
+                margin: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+                decoration: BoxDecoration(
+                    color: Colors.amber,
+                  borderRadius: BorderRadius.circular(10)
+                ),
+                height: 100,
+                width: 100,
+              ),
+            ),
             //The button at the bottom of the third part
             buildProfile(size),
             ClipPath(
@@ -80,8 +87,10 @@ class _LanguageWelcomeScreenState extends State with SingleTickerProviderStateMi
               gradient: LinearGradient(
                   begin: Alignment.bottomLeft,
                   end: Alignment.topRight,
-                  colors:[Color(0xFF0D0B4A), Color(0xFF08061F)]
-              )
+                  colors:[
+                    Color(0xFF0D0B4A), Color(0xFF08061F)
+                  ]
+              ),
           ),
         ),
       );
